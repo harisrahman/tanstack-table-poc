@@ -1,0 +1,58 @@
+.Table {
+	width: 100%;
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+
+		td,
+		th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		tr:hover {
+			background-color: #ddd;
+		}
+
+		th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #04aa6d;
+			color: white;
+		}
+	}
+
+	input[type='checkbox'] {
+		cursor: pointer;
+	}
+
+	.page-tools {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 1rem;
+
+		button {
+			border-width: 1px;
+			border-radius: 0.25rem;
+			padding: 0.25rem;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+		}
+
+		input,
+		select {
+			padding: 0.2rem 0;
+		}
+	}
+}

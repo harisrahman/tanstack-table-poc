@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.px-1 {
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+.btn-transparent {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	box-shadow: none;
+	margin: 0 0.25rem;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.select-none {
+	user-select: none;
+}

@@ -1,11 +1,18 @@
 import './App.scss';
+import Table from './components/Table/Table';
 
-function App() {
+const App = () => {
 	return (
-		<div>
-			<h1>TanStack Table v8 POC</h1>
+		<div className="App">
+			<div className="body">
+				<h2>
+					Table (pagination, selection, sorting and custom column
+					render)
+				</h2>
+				<Table />
+			</div>
 		</div>
 	);
-}
+};
 
 export default App;
