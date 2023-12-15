@@ -1,0 +1,4 @@
+* text=auto
+
+yarn.lock             binary
+*.sh                  text eol=lf
