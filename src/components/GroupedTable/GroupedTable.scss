@@ -1,0 +1,16 @@
+.GroupedTable {
+	.expandAllHeader {
+		width: 1rem;
+	}
+
+	.group-title {
+		&:hover {
+			background-color: transparent;
+		}
+
+		> td {
+			border-right: none;
+			border-left: none;
+		}
+	}
+}

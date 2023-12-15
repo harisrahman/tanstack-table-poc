@@ -1,4 +1,5 @@
 import './App.scss';
+import GroupedTable from './components/GroupedTable/GroupedTable';
 import SubRowTable from './components/SubRowTable/SubRowTable';
 import Table from './components/Table/Table';
 
@@ -14,6 +15,9 @@ const App = () => {
 
 				<h2>SubRow Table</h2>
 				<SubRowTable />
+
+				<h2>Grouped Table</h2>
+				<GroupedTable />
 			</div>
 		</div>
 	);
