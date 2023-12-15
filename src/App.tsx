@@ -1,4 +1,5 @@
 import './App.scss';
+import SubRowTable from './components/SubRowTable/SubRowTable';
 import Table from './components/Table/Table';
 
 const App = () => {
@@ -10,6 +11,9 @@ const App = () => {
 					render)
 				</h2>
 				<Table />
+
+				<h2>SubRow Table</h2>
+				<SubRowTable />
 			</div>
 		</div>
 	);
