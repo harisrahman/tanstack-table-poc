@@ -30,7 +30,7 @@ export const columns = [
 	}),
 
 	columnHelper.accessor('id', {
-		header: 'id',
+		header: 'Id',
 	}),
 	columnHelper.accessor('first_name', {
 		header: 'First Name',
