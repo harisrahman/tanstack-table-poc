@@ -1,0 +1,9 @@
+.Table.SubGridTable {
+	tr.expanded-sub-table {
+		background-color: #fff;
+
+		&:hover {
+			background-color: initial;
+		}
+	}
+}

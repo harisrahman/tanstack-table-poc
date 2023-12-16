@@ -1,0 +1,11 @@
+.Table.SubTable {
+	table {
+		tr:nth-child(odd) {
+			background-color: #fff;
+		}
+
+		th {
+			background-color: #7304aa;
+		}
+	}
+}
