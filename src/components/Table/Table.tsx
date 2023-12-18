@@ -23,8 +23,7 @@ const Table = () => {
 	const table = useReactTable({
 		data,
 		columns,
-		getCoreRowModel: getCoreRowModel(),
-		getSortedRowModel: getSortedRowModel(),
+		columnResizeMode: 'onChange',
 		state: {
 			sorting,
 			rowSelection,
@@ -32,27 +31,37 @@ const Table = () => {
 		enableRowSelection: true,
 		onSortingChange: setSorting,
 		onRowSelectionChange: setRowSelection,
+		getCoreRowModel: getCoreRowModel(),
+		getSortedRowModel: getSortedRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 	});
 
 	return (
 		<div className="Table">
-			<table>
+			<table
+				style={{
+					width: table.getCenterTotalSize(),
+				}}
+			>
 				<thead>
 					{table.getHeaderGroups().map((headerGroup) => (
 						<tr key={headerGroup.id}>
 							{headerGroup.headers.map((header) => (
-								<th key={header.id}>
+								<th
+									key={header.id}
+									colSpan={header.colSpan}
+									style={{
+										width: header.getSize(),
+									}}
+								>
 									{header.isPlaceholder ? null : (
 										<div
-											{...{
-												className:
-													header.column.getCanSort()
-														? 'cursor-pointer select-none'
-														: '',
-												onClick:
-													header.column.getToggleSortingHandler(),
-											}}
+											className={
+												header.column.getCanSort()
+													? 'cursor-pointer select-none'
+													: ''
+											}
+											onClick={header.column.getToggleSortingHandler()}
 										>
 											{flexRender(
 												header.column.columnDef.header,
@@ -66,6 +75,15 @@ const Table = () => {
 											] ?? null}
 										</div>
 									)}
+									<div
+										onMouseDown={header.getResizeHandler()}
+										onTouchStart={header.getResizeHandler()}
+										className={`resizer ${
+											header.column.getIsResizing()
+												? 'isResizing'
+												: ''
+										}`}
+									/>
 								</th>
 							))}
 						</tr>
@@ -75,7 +93,12 @@ const Table = () => {
 					{table.getRowModel().rows.map((row) => (
 						<tr key={row.id}>
 							{row.getVisibleCells().map((cell) => (
-								<td key={cell.id}>
+								<td
+									key={cell.id}
+									style={{
+										width: cell.column.getSize(),
+									}}
+								>
 									{flexRender(
 										cell.column.columnDef.cell,
 										cell.getContext(),

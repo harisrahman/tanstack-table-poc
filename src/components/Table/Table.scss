@@ -1,5 +1,6 @@
 .Table {
-	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
 
 	table {
 		border-collapse: collapse;
@@ -20,11 +21,39 @@
 		}
 
 		th {
+			position: relative;
 			padding-top: 12px;
 			padding-bottom: 12px;
 			text-align: left;
 			background-color: #04aa6d;
 			color: white;
+
+			.resizer {
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+				width: 5px;
+				background: rgba(0, 0, 0, 0.5);
+				cursor: col-resize;
+				user-select: none;
+				touch-action: none;
+
+				@media (hover: hover) {
+					opacity: 0;
+				}
+
+				&.isResizing {
+					background: blue;
+					opacity: 1;
+				}
+			}
+
+			@media (hover: hover) {
+				&:hover > .resizer {
+					opacity: 1;
+				}
+			}
 		}
 	}
 

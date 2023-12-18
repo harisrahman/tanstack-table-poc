@@ -9,8 +9,8 @@ const App = () => {
 		<div className="App">
 			<div className="body">
 				<h2>
-					Table (pagination, selection, sorting and custom column
-					render)
+					Table (pagination, selection, sorting, column resizing and
+					custom column render)
 				</h2>
 				<Table />
 

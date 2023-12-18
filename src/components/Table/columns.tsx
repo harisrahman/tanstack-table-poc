@@ -29,10 +29,12 @@ export const columns = [
 				onChange={row.getToggleSelectedHandler()}
 			/>
 		),
+		size: 35,
 	}),
 
 	columnHelper.accessor('id', {
 		header: 'Id',
+		size: 50,
 	}),
 	columnHelper.accessor('first_name', {
 		header: 'First Name',
