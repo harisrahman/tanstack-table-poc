@@ -1,5 +1,6 @@
 import './App.scss';
 import GroupedTable from './components/GroupedTable/GroupedTable';
+import StickyRowTable from './components/StickyRowTable/StickyRowTable';
 import SubGridTable from './components/SubGridTable/SubGridTable';
 import SubRowTable from './components/SubRowTable/SubRowTable';
 import Table from './components/Table/Table';
@@ -22,6 +23,9 @@ const App = () => {
 
 				<h2>With Sub Grids</h2>
 				<SubGridTable />
+
+				<h2>With Sticky Row</h2>
+				<StickyRowTable />
 			</div>
 		</div>
 	);
